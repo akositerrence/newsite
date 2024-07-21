@@ -3,9 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="description" content="">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/navigation.css">
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <title>akositerrence</title>
 </head>
 <body>
-    
+    <!-- background -->
+    <background></background>
+    <!-- navigation page < mobile > -->
+    <nav-mobile class="center">
+        <navbar-mobile>
+            <layout id="navbar-mobile-layout">
+                <morse-scroller class="morse" class="unselectable"> .--. .- --. . ... </morse-scroller> <!-- pages -->
+                <menu>
+                    <layout class="menu-layout">
+                        <a href="javascript:void(0);" class="nav-selection"> <i class="bi bi-journals"></i> Home </a>
+                        <a href="javascript:void(0);" class="nav-selection"> <i class="bi bi-journals"></i> Portfolio </a>
+                        <a href="javascript:void(0);" class="nav-selection"> <i class="bi bi-journals"></i> Education </a>
+                    </layout>
+                </menu>
+            </layout>
+        </navbar-mobile>
+    </nav-mobile>
+    <!-- mobile top -->
+    <top>
+        <top-mobile class="center">
+            <layout id="top-mobile-layout" class="center">
+                <logo> <i class="bi bi-upc"></i> </logo>
+                <name class="unselectable"> @akositerrence </name>
+                <menu> <i class="bi bi-upc"></i> </menu>
+            </layout>
+        </top-mobile>
+    </top>
+    <!-- navigation top < desktop > -->
+    <nav-desktop class="center">
+        <navbar-desktop>
+            <layout id="navbar-desktop-layout">
+                <layout id="desktop-logoside-layout" class="center">
+                    <logo> <i class="bi bi-upc"></i> </logo>
+                    <name class="unselectable"> @akositerrence </name>
+                </layout>
+                <menu>
+                    <layout class="menu-layout">
+                        <a href="javascript:void(0);" class="nav-selection"> Home </a>
+                        <a href="javascript:void(0);" class="nav-selection"> Portfolio </a>
+                        <a href="javascript:void(0);" class="nav-selection"> Education </a>
+                    </layout>
+                </menu>
+            </layout>
+        </navbar-desktop>
+    </nav-desktop>
+    <!-- main page -->
+    <main>
+        <layout id="main-layout">
+            <layout id="residence-layout">
+                <home-image src="/images/profile.webp"></home-image>
+                <header> Some stuff about me </header>
+                <morse> -- -.-- ... - --- .-. -.-- </morse>
+                <section id="introduction-text"></section>
+                <map name="residence-map"></map>
+                <section id="map-text"></section>
+            </layout>
+            <layout id="experience-layout">
+                <header> Some stuff about work </header>
+                <morse> -- -.-- . -..- .--. . .-. .. . -. -.-. . </morse>
+                <map name="experience-map"></map>
+                <section id="experience-text"></section>
+            </layout>
+        </layout>
+    </main>
+    <!-- footer -->
+    <footer class="center">
+        <layout id="footer-layout">    
+            <layout id="stamp-layout">
+                <signature class="unselectable"> Terrence Andre San Gabriel </signature>
+                <version class="unselectable"> v07.19.24 </version>
+            </layout>
+            <social>
+                <layout id="social-layout">    
+                    <a target="_blank" class="social-icons" href="https://www.instagram.com/akosi_terrence/"> <i class="bi bi-instagram"></i> </a>
+                    <a target="_blank" class="social-icons" href=""> <i class="bi bi-spotify"></i> </a>
+                    <a target="_blank" class="social-icons" href="https://www.linkedin.com/in/tsangabriel/"> <i class="bi bi-linkedin"></i> </a>
+                    <a target="_blank" class="social-icons" href="https://github.com/akositerrence"> <i class="bi bi-github"></i> </a>
+                    <a target="_blank" class="social-icons" href=""> <i class="bi bi-envelope"></i> </a>
+                </layout>
+            </social>
+        </layout>
+    </footer>
 </body>
 </html>

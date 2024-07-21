@@ -1,0 +1,25 @@
+/* general */
+
+:root {
+    --nav-background: rgb(250, 250, 250);
+    --nav-text: rgb(19, 18, 18);
+    --main-background: rgb(19, 18, 18);
+    --main-text: rgb(210, 210, 210);
+    --text-mobile: 3.5vw;
+    --text-desktop: 1.75vw;
+}
+
+/* layouts */
+
+#main-layout {
+    display: flex;
+    flex-direction: column;
+}
+
+#residence-layout, #experience-layout {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--main-text);
+}

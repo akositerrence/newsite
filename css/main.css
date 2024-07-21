@@ -1,0 +1,231 @@
+/* general */
+
+:root {
+    --nav-background: rgb(250, 250, 250);
+    --nav-text: rgb(19, 18, 18);
+    --main-background: rgb(19, 18, 18);
+    --main-text: rgb(210, 210, 210);
+    --text-mobile: 3.5vw;
+    --text-desktop: 1.75vw;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: optima;
+    text-decoration: none;
+    position: relative;
+    background-color: transparent;
+    max-width: 100%;
+    line-height: 1.75;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.morse {
+    font-family: 'Courier New';
+}
+
+.unselectable {
+    user-select: none; 
+    -webkit-user-select: none; 
+    -moz-user-select: none; 
+    -ms-user-select: none;
+}
+
+/* background */
+background { 
+    position: fixed;
+    display: block;
+    background-color: var(--main-background);
+    width: 100vw;
+    height: 100vh;
+}
+
+/* navigation < mobile > */
+
+nav-mobile {
+    position: fixed;
+    background: var(--nav-background);
+    z-index: -1;
+    width: 100vw;
+    height: 100vh;
+}
+
+#navbar-mobile-layout {
+    display: flex;
+    flex-direction: row;
+}
+
+morse-scroller {
+    text-align: center;
+    width: 50vw;
+    font-size: 3vw;
+    transform: rotate(90deg) translateY(-8vw);
+}
+
+.menu-layout {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.nav-selection {
+    font-size: 5.5vw;
+    color: var(--nav-text)
+}
+
+/* top < mobile > */
+top {
+    z-index: 10;
+    position: sticky;
+}
+
+#top-mobile-layout {
+    display: flex;
+    flex-direction: row;
+    gap: 19vw;
+    font-size: 10vw;
+    color: var(--main-text);
+}
+
+name {
+    font-size: 5vw;
+    font-weight: 100;
+}
+
+/* navigation < desktop > suppression */
+
+nav-desktop {
+    display: flex;
+    background: transparent;
+    z-index: -10;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+}
+
+/* footer < mobile > */
+
+#footer-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--main-text);
+}
+
+@media (max-width: 768px) {
+    #stamp-layout {
+        order: 2;
+    }
+    
+    #social-layout {
+        order: 1;
+        display: flex;
+        gap: 4.5vw;
+        font-size: 7vw;
+    }
+}
+
+.social-icons {
+    color: var(--main-text);
+    padding: 0vw 1vw 0vw;
+}
+
+signature, version {
+    font-size: var(--text-mobile);
+    font-weight: 100;
+}
+
+/* desktop arrangement */
+
+@media (min-width: 768px) {
+
+    /* navigation & top < mobile > supression */
+
+    nav-mobile, top-mobile {
+        background: transparent;
+        z-index: -10;
+        width: 0;
+        height: 0;
+        overflow: hidden;
+    }
+
+    /* navigation < desktop > exposure */
+
+    nav-desktop {
+        position: sticky;
+        display: flex;
+        background: transparent;
+        z-index: 10;
+        width: 100vw;
+        height: 12.5vw;
+        overflow: hidden;
+        color: var(--main-text);
+    }
+
+    #navbar-desktop-layout {
+        display: flex;
+        align-items: center;
+        gap: 25vw;
+        font-size: 7.5vw;
+        padding-right: 0.5vw;
+    }
+
+    #desktop-logoside-layout {
+        gap: 2.5vw;
+    }
+
+    .menu-layout {
+        display: flex;
+        flex-direction: row;
+        gap: 2.5vw;
+    }
+
+    name {
+        font-size: 3vw;
+    }
+
+    .nav-selection {
+        font-size: 3vw;
+        font-weight: 500;
+        color: var(--main-text);
+        padding: 0vw 1vw 0vw;
+    }
+
+    .nav-selection:hover {
+        background-color: var(--main-text);
+        color: var(--main-background);
+        border-radius: 0.5vw;
+        transition: background-color 0.5s ease, color 0.5s ease;
+    }
+
+    /* footer < desktop > */
+
+    #footer-layout {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 30vw;
+    }
+
+    #social-layout {
+        display: flex;
+        font-size: 3.5vw;
+    }
+
+    .social-icons:hover {
+        background-color: var(--main-text);
+        color: var(--main-background);
+        border-radius: 0.5vw;
+        transition: background-color 0.5s ease, color 0.5s ease;
+    }
+
+    signature, version {
+        font-size: var(--text-desktop);
+    }
+}
