@@ -43,7 +43,7 @@
         <navbar-desktop>
             <layout id="navbar-desktop-layout">
                 <layout id="desktop-logoside-layout" class="center">
-                    <logo> <i class="bi bi-upc"></i> </logo>
+                    <logo id="desktop-logo"> <i class="bi bi-upc"></i> </logo>
                     <name class="unselectable"> @akositerrence </name>
                 </layout>
                 <menu>
@@ -60,18 +60,38 @@
     <main>
         <layout id="main-layout">
             <layout id="residence-layout">
-                <home-image src="/images/profile.webp"></home-image>
+                <img id="home-image" src="/images/profile.webp" alt="terrence andre san gabriel"></img>
                 <header> Some stuff about me </header>
-                <morse> -- -.-- ... - --- .-. -.-- </morse>
-                <section id="introduction-text"></section>
+                <morse class="morse-divider"> -- -.-- ... - --- .-. -.-- </morse>
+                <section id="introduction-text"> 
+                    <p>
+                        Hey there! I'm Terrence Andre San Gabriel, a 
+                        sophomore surviving Mechanical Engineering and 
+                        Physics at North Dakota State University based 
+                        in Fargo, North Dakota. This site's a work in 
+                        progress, made with HTML, CSS, and Javascript.
+                    </p> 
+                </section>
                 <map name="residence-map"></map>
                 <section id="map-text"></section>
             </layout>
             <layout id="experience-layout">
                 <header> Some stuff about work </header>
-                <morse> -- -.-- . -..- .--. . .-. .. . -. -.-. . </morse>
+                <morse class="morse-divider"> -- -.-- . -..- .--. . .-. .. . -. -.-. . </morse>
                 <map name="experience-map"></map>
-                <section id="experience-text"></section>
+                <section id="experience-text"> 
+                    <p> 
+                        Lorem ipsum dolor sit amet, consectetur adipiscing 
+                        elit, sed do eiusmod tempor incididunt ut labore 
+                        et dolore magna aliqua. Ut enim ad minim veniam, 
+                        quis nostrud exercitation ullamco laboris nisi ut 
+                        aliquip ex ea commodo consequat. Duis aute irure 
+                        dolor in reprehenderit in voluptate velit esse 
+                        cillum dolore eu fugiat nulla pariatur. Excepteur 
+                        sint occaecat cupidatat non proident, sunt in culpa 
+                        qui officia deserunt mollit anim id est laborum 
+                    </p> 
+                </section>
             </layout>
         </layout>
     </main>
@@ -93,5 +113,6 @@
             </social>
         </layout>
     </footer>
+    <script src="loadText.js"></script>
 </body>
 </html>

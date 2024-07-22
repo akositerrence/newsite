@@ -5,8 +5,8 @@
     --nav-text: rgb(19, 18, 18);
     --main-background: rgb(19, 18, 18);
     --main-text: rgb(210, 210, 210);
-    --text-mobile: 3.5vw;
-    --text-desktop: 1.75vw;
+    --text-mobile: 3.25vw;
+    --text-desktop: 1.25vw;
 }
 
 /* layouts */
@@ -22,4 +22,55 @@
     justify-content: center;
     align-items: center;
     color: var(--main-text);
+}
+
+/* text style < mobile > */
+
+header {
+    font-size: 5vw;
+    padding-top: 5vw;
+}
+
+.morse-divider {
+    font-size: var(--text-mobile);
+}
+
+section {
+    font-size: var(--text-mobile);
+    text-align: justify;
+    color: var(--main-text);
+    padding-top: 2vw;
+    width: 80vw;
+}
+
+/* images < mobile > */
+#home-image {
+    width: 90vw;
+    height: 90vw;
+}
+
+/* desktop configurations */
+
+@media (min-width: 768px) {
+    /* text style < desktop > */
+    header {
+        font-size: 2vw;
+        padding-top: 0;
+    }
+
+    .morse-divider {
+        font-size: var(--text-desktop);
+    }
+
+    section {
+        font-size: var(--text-desktop);
+        padding-top: 0.75vw;
+        width: 80vw;
+    }
+
+    /* images < desktop > */
+    #home-image {
+        width: 25vw;
+        height: 25vw;
+    }
 }
