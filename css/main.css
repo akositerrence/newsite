@@ -91,7 +91,7 @@ top {
 #top-mobile-layout {
     display: flex;
     flex-direction: row;
-    height: 15vh;
+    height: 10.5vh;
     gap: 19vw;
     font-size: 10vw;
     color: var(--main-text);
@@ -238,4 +238,5 @@ signature, version {
     signature, version {
         font-size: var(--text-desktop);
     }
+    
 }

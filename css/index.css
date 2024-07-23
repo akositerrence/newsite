@@ -9,14 +9,14 @@
     --text-desktop: 1.25vw;
 }
 
-/* layouts */
+/* layouts < mobile > */
 
 #main-layout {
     display: flex;
     flex-direction: column;
 }
 
-#residence-layout, #experience-layout {
+#introduction-layout, #about-layout, #residence-layout, #experience-layout {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -28,7 +28,7 @@
 
 header {
     font-size: 5vw;
-    padding-top: 5vw;
+    margin-top: 5vw;
 }
 
 .morse-divider {
@@ -39,23 +39,107 @@ section {
     font-size: var(--text-mobile);
     text-align: justify;
     color: var(--main-text);
-    padding-top: 2vw;
+    margin-top: 2vw;
     width: 80vw;
 }
 
+#introduction-text-block {
+    flex-direction: column;
+}
+
+#map-text {
+    margin-top: 5vw;
+}
+
+#experience-text {
+    margin-top: 5vw;
+    order: 3;
+}
+
+#experience-header {
+    flex-direction: column;
+    order: 1;
+}
+
 /* images < mobile > */
+
 #home-image {
     width: 90vw;
     height: 90vw;
 }
 
+#residence-history-map {
+    width: 90vw;
+    height: auto;
+    margin-top: 5vw;
+}
+
+#experience-history-interface {
+    width: 90vw;
+    height: auto;
+    margin-top: 5vw;
+    order: 2;
+}
+
 /* desktop configurations */
 
 @media (min-width: 768px) {
+
+    /* layouts < desktop > */
+
+    #main-layout {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #about-layout {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: var(--main-text);
+    }
+
+    #introduction-layout {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        color: var(--main-text);
+        gap: 5vw;
+    }
+
+    #residence-layout {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        color: var(--main-text);
+        gap: 5vw;
+    }
+
+    #experience-layout { /* ----------------  */
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        width: 80vw;
+        margin-left: auto;
+        margin-right: auto;
+        color: var(--main-text);
+    }
+
+    #experience-header { /* -----------------  */
+        flex-direction: column;
+        grid-column: 2;
+        grid-row: 1;
+        transform: translateY(-7vw);
+    }
+
     /* text style < desktop > */
+
     header {
         font-size: 2vw;
-        padding-top: 0;
+        margin-top: 0;
     }
 
     .morse-divider {
@@ -64,13 +148,50 @@ section {
 
     section {
         font-size: var(--text-desktop);
-        padding-top: 0.75vw;
+        margin-top: 0.75vw;
         width: 80vw;
     }
 
+    #introduction-text-block {
+        width: 50vw;
+    }
+
+    #map-text {
+        width: 50vw;
+        order: 1;
+        margin-top: 0;
+    }
+
+    #experience-text { /* -----------------  */
+        width: 50vw;
+        margin-top: 0vw;
+        grid-column: 2;
+        grid-row: 1;
+        transform: translateY(3vw);
+    }
+
     /* images < desktop > */
+
     #home-image {
         width: 25vw;
         height: 25vw;
     }
+
+    #residence-history-map {
+        width: 25vw;
+        height: auto;
+        order: 2;
+        margin-right: 5vw;
+        margin-top: 0vw;
+    }
+
+    #experience-history-interface { /* -----------------  */
+        display: flex;
+        width: 25vw;
+        height: auto;
+        margin-top: 0vw;
+        grid-column: 1;
+        grid-row: 1;
+    }
+    
 }

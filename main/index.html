@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <link rel="stylesheet" href="/css/main.css">
-    <link rel="stylesheet" href="/css/navigation.css">
     <link rel="stylesheet" href="/css/index.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
     <title>@akositerrence</title>
@@ -59,26 +58,48 @@
     <!-- main page -->
     <main>
         <layout id="main-layout">
-            <layout id="residence-layout">
-                <img id="home-image" src="/images/profile.webp" alt="terrence andre san gabriel"></img>
-                <header> Some stuff about me </header>
-                <morse class="morse-divider"> -- -.-- ... - --- .-. -.-- </morse>
-                <section id="introduction-text"> 
-                    <p>
-                        Hey there! I'm Terrence Andre San Gabriel, a 
-                        sophomore surviving Mechanical Engineering and 
-                        Physics at North Dakota State University based 
-                        in Fargo, North Dakota. This site's a work in 
-                        progress, made with HTML, CSS, and Javascript.
-                    </p> 
-                </section>
-                <map name="residence-map"></map>
-                <section id="map-text"></section>
+            <layout id="about-layout">
+                <layout id="introduction-layout">
+                    <img id="home-image" src="/images/profile.webp" alt="terrence andre san gabriel"></img>
+                    <layout id="introduction-text-block" class="center">
+                        <header> Some stuff about me </header>
+                        <morse class="morse-divider"> -- -.-- ... - --- .-. -.-- </morse> <!-- revise morse -->
+                        <section id="introduction-text"> 
+                            <p>
+                                Hey there! I'm Terrence Andre San Gabriel, a 
+                                sophomore suffering through Mechanical Engineering 
+                                and Physics at North Dakota State University based 
+                                in Fargo, North Dakota. This site's a work in 
+                                progress, made with HTML, CSS, and Javascript.
+                            </p> 
+                        </section>
+                    </layout>
+                </layout>
+                <layout id="residence-layout" class="center">
+                    <img id="residence-history-map" src="/images/placeholder.webp" usemap="residence-map" alt="previous areas of residence">
+                    <map name="residence-map"></map>
+                    <section id="map-text">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing 
+                            elit, sed do eiusmod tempor incididunt ut labore 
+                            et dolore magna aliqua. Ut enim ad minim veniam, 
+                            quis nostrud exercitation ullamco laboris nisi ut 
+                            aliquip ex ea commodo consequat. Duis aute irure 
+                            dolor in reprehenderit in voluptate velit esse 
+                            cillum dolore eu fugiat nulla pariatur. Excepteur 
+                            sint occaecat cupidatat non proident, sunt in culpa 
+                            qui officia deserunt mollit anim id est laborum 
+                        </p>
+                    </section>
+                </layout>
             </layout>
             <layout id="experience-layout">
-                <header> Some stuff about work </header>
-                <morse class="morse-divider"> -- -.-- . -..- .--. . .-. .. . -. -.-. . </morse>
+                <img id="experience-history-interface" src="/images/placeholder2.webp" usemap="experience-map" alt="previous areas of employment">
                 <map name="experience-map"></map>
+                <layout id="experience-header" class="center">
+                    <header> Some stuff about work </header>
+                    <morse class="morse-divider"> -- -.-- . -..- .--. . .-. .. . -. -.-. . </morse> <!-- revise morse -->
+                </layout>
                 <section id="experience-text"> 
                     <p> 
                         Lorem ipsum dolor sit amet, consectetur adipiscing 
@@ -113,6 +134,6 @@
             </social>
         </layout>
     </footer>
-    <script src="loadText.js"></script>
+    <script src="/javascript/mobilenav.js"></script>
 </body>
 </html>
