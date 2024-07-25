@@ -5,7 +5,7 @@
     --nav-text: rgb(19, 18, 18);
     --main-background: rgb(19, 18, 18);
     --main-text: rgb(200, 200, 200);
-    --text-mobile: 3.15vw;
+    --text-mobile: 3vw;
     --text-desktop: 1vw;
 }
 
@@ -51,6 +51,11 @@ html {
 header {
     font-size: 5vw;
     margin-top: 5vw;
+}
+
+.morse-divider {
+    font-size: var(--text-mobile);
+    margin-bottom: 1.25vw;
 }
 
 location {
@@ -125,6 +130,10 @@ li {
         font-size: 2vw;
         margin-top: 0;
     }
+
+    .morse-divider {
+        font-size: var(--text-desktop);
+    }
     
     location {
         margin-top: 0.25w;
@@ -138,6 +147,7 @@ li {
     
     .morse-divider {
         font-size: var(--text-desktop);
+        margin-bottom: 0.75vw;
     }
 
     /* images < desktop > */

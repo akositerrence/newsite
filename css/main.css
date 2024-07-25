@@ -5,7 +5,7 @@
     --nav-text: rgb(19, 18, 18);
     --main-background: rgb(19, 18, 18);
     --main-text: rgb(200, 200, 200);
-    --text-mobile: 3.15vw;
+    --text-mobile: 3vw;
     --text-desktop: 1vw;
 }
 
@@ -117,7 +117,8 @@ nav-desktop {
 /* footer < mobile > */
 
 footer {
-    transform: translateY(-30vw);
+    position: absolute;
+    bottom: 0;
 }
 
 #footer-layout {
@@ -221,9 +222,8 @@ signature, version {
     }
 
     /* footer < desktop > */
-
     footer {
-        transform: translateY(-11vw);
+        bottom: -3vw;
     }
 
     #footer-layout {

@@ -5,7 +5,7 @@
     --nav-text: rgb(19, 18, 18);
     --main-background: rgb(19, 18, 18);
     --main-text: rgb(200, 200, 200);
-    --text-mobile: 3.15vw;
+    --text-mobile: 3vw;
     --text-desktop: 1vw;
 }
 
@@ -49,6 +49,11 @@ header {
     margin-top: 5vw;
 }
 
+.morse-divider {
+    font-size: var(--text-mobile);
+    margin-bottom: 1.15vw;
+}
+
 ul {
     list-style-type: none;
     flex-wrap: wrap;
@@ -90,6 +95,11 @@ li {
     header {
         font-size: 2vw;
         margin-top: 0;
+    }
+
+    .morse-divider {
+        font-size: var(--text-desktop);
+        margin-bottom: 0.75vw;
     }
     
     li {
