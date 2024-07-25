@@ -1,0 +1,156 @@
+/* general */
+
+:root {
+    --nav-background: rgb(250, 250, 250);
+    --nav-text: rgb(19, 18, 18);
+    --main-background: rgb(19, 18, 18);
+    --main-text: rgb(200, 200, 200);
+    --text-mobile: 3.15vw;
+    --text-desktop: 1vw;
+}
+
+/* scroll snap */
+
+html {
+    scroll-snap-type: y mandatory;
+}
+
+#ndsu-layout, #century-layout {
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    height: 100vh;
+}
+
+/* layouts < mobile > */
+
+#main-layout {
+    display: flex;
+    flex-direction: column;
+}
+
+#ndsu-layout, #century-layout {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--main-text);
+}
+
+#ndsu-header, #century-header {
+    flex-direction: column;
+}
+
+#ndsu-activities-grid, #century-activities-grid {
+    display: flex;
+    width: 80vw;
+    column-gap: 2.5vw;
+}
+
+/* text style < mobile > */
+
+header {
+    font-size: 5vw;
+    margin-top: 5vw;
+}
+
+location {
+    font-size: var(--text-mobile);
+}
+
+dates {
+    font-size: var(--text-mobile);
+}
+
+.morse-divider {
+    font-size: var(--text-mobile);
+}
+
+ul {
+    list-style-type: none;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+li {
+    font-size: var(--text-mobile);
+    text-align: justify;
+    color: var(--main-text);
+}
+
+/* images < mobile > */
+
+#ndsu-image {
+    width: 60vw;
+    filter: grayscale(45%);
+}
+#century-image {
+    width: 40vw;
+    margin-top: 5vw;
+    filter: grayscale(45%);
+}
+
+/* desktop configurations */
+
+@media (min-width: 768px) {
+
+    /* layouts < desktop > */
+
+    #main-layout {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #ndsu-layout, #century-layout {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        color: var(--main-text);
+        gap: 5vw;
+    }
+
+    #ndsu-activities-grid, #century-activities-grid {
+        display: flex;
+        width: 50vw;
+        column-gap: 1vw;
+    }
+
+    li {
+        font-size: var(--text-desktop);
+    }
+
+    /* text style < desktop > */
+
+    header {
+        font-size: 2vw;
+        margin-top: 0;
+    }
+    
+    location {
+        margin-top: 0.25w;
+        font-size: var(--text-desktop);
+    }
+    
+    dates {
+        margin-top: 0.25w;
+        font-size: var(--text-desktop);
+    }
+    
+    .morse-divider {
+        font-size: var(--text-desktop);
+    }
+
+    /* images < desktop > */
+
+    #ndsu-image {
+        width: 30vw;
+        margin-top: 0;
+    }
+
+    #century-image {
+        width: 25vw;
+        margin: 0 2.5vw 0;
+        order: 2;
+    }
+
+}

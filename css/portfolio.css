@@ -1,0 +1,99 @@
+/* general */
+
+:root {
+    --nav-background: rgb(250, 250, 250);
+    --nav-text: rgb(19, 18, 18);
+    --main-background: rgb(19, 18, 18);
+    --main-text: rgb(200, 200, 200);
+    --text-mobile: 3.15vw;
+    --text-desktop: 1vw;
+}
+
+/* scroll snap */
+
+html {
+    scroll-snap-type: y mandatory;
+}
+
+#skills-layout, #project-layout {
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    height: 100vh;
+}
+
+/* layouts < mobile > */
+
+#main-layout {
+    display: flex;
+    flex-direction: column;
+}
+
+#skills-layout, #project-layout {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--main-text);
+}
+
+#skill-grid, #project-grid {
+    display: flex;
+    width: 80vw;
+    gap: 0.5vw;
+}
+
+/* text style < mobile > */
+
+header {
+    font-size: 5vw;
+    margin-top: 5vw;
+}
+
+ul {
+    list-style-type: none;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+li {
+    font-size: var(--text-mobile);
+    text-align: justify;
+    color: var(--main-text);
+}
+
+/* desktop configurations */
+
+@media (min-width: 768px) {
+    /* layouts < mobile > */
+
+    #main-layout {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #skills-layout, #project-layout {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: var(--main-text);
+    }
+
+    #skill-grid, #project-grid {
+        display: flex;
+        width: 80vw;
+        gap: 0.5vw;
+    }
+
+    /* text style < mobile > */
+
+    header {
+        font-size: 2vw;
+        margin-top: 0;
+    }
+    
+    li {
+        font-size: var(--text-desktop);
+    }
+
+}
