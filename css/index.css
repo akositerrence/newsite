@@ -40,7 +40,7 @@ html {
 
 header {
     font-size: 5vw;
-    margin-top: 5vw;
+    margin-top: 4vw;
 }
 
 .morse-divider {
@@ -156,7 +156,7 @@ section {
 
     header {
         font-size: 2vw;
-        margin-top: 0;
+        margin-top: 0vw;
     }
 
     .morse-divider {

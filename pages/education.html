@@ -11,7 +11,7 @@
 </head>
 <body>
     <!-- background -->
-    <background></background>
+    <background class="page"></background>
     <!-- navigation page < mobile > -->
     <nav-mobile class="center">
         <navbar-mobile>
@@ -19,9 +19,9 @@
                 <morse-scroller class="morse" class="unselectable"> .--. .- --. . ... </morse-scroller> <!-- pages -->
                 <menu>
                     <layout class="menu-layout">
-                        <a href="javascript:void(0);" class="nav-selection"> <i class="bi bi-journals"></i> Home </a>
-                        <a href="javascript:void(0);" class="nav-selection"> <i class="bi bi-journals"></i> Portfolio </a>
-                        <a href="javascript:void(0);" class="nav-selection"> <i class="bi bi-journals"></i> Education </a>
+                        <a href="/index.html" class="nav-selection"> <i class="bi bi-journals"></i> Home </a>
+                        <a href="/pages/portfolio.html" class="nav-selection"> <i class="bi bi-journals"></i> Portfolio </a>
+                        <a href="/pages/education.html" class="nav-selection"> <i class="bi bi-journals"></i> Education </a>
                     </layout>
                 </menu>
             </layout>
@@ -31,9 +31,9 @@
     <top>
         <top-mobile class="center">
             <layout id="top-mobile-layout" class="center">
-                <logo> <i class="bi bi-upc"></i> </logo>
-                <name class="unselectable"> @akositerrence </name>
-                <menu> <i class="bi bi-upc"></i> </menu>
+                <logo id="mobile-logo" class="page"> <i class="bi bi-upc"></i> </logo>
+                <name id="mobile-title" class=" unselectable page"> @akositerrence </name>
+                <menu id="mobile-menu-button" class="page"> <i class="bi bi-upc"></i> </menu>
             </layout>
         </top-mobile>
     </top>
@@ -47,7 +47,7 @@
                 </layout>
                 <menu>
                     <layout class="menu-layout">
-                        <a href="/main/index.html" class="nav-selection"> Home </a>
+                        <a href="/index.html" class="nav-selection"> Home </a>
                         <a href="/pages/portfolio.html" class="nav-selection"> Portfolio </a>
                         <a href="/pages/education.html" class="nav-selection"> Education </a>
                     </layout>
@@ -56,7 +56,7 @@
         </navbar-desktop>
     </nav-desktop>
     <!-- main page -->
-    <main>
+    <main class="page">
         <layout id="main-layout">
             <layout id="ndsu-layout" class="center">
                 <img id="ndsu-image" src="/images/ndsu.webp" alt="north dakota state university logo">
@@ -128,6 +128,6 @@
             </layout>
         </layout>
     </main>
-    <script src="/javascript/mobilenav.js"></script>
+    <script src="/javascript/nav.js"></script>
 </body>
 </html>
