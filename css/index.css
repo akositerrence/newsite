@@ -9,18 +9,6 @@
     --text-desktop: 1vw;
 }
 
-/* scroll snap */
-
-html {
-    scroll-snap-type: y mandatory;
-}
-
-#introduction-layout, #residence-layout, #experience-layout {
-    scroll-snap-align: start;
-    scroll-snap-stop: always;
-    height: 100vh;
-}
-
 /* layouts < mobile > */
 
 #main-layout {
@@ -34,6 +22,10 @@ html {
     justify-content: center;
     align-items: center;
     color: var(--main-text);
+}
+
+#introduction-layout, #residence-layout, #experience-layout {
+    height: 85vh;
 }
 
 /* text style < mobile > */
@@ -104,6 +96,10 @@ section {
 @media (min-width: 768px) {
 
     /* layouts < desktop > */
+
+    #introduction-layout, #residence-layout, #experience-layout {
+        height: 75vh;
+    }
 
     #main-layout {
         display: flex;

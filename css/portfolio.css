@@ -9,18 +9,6 @@
     --text-desktop: 1vw;
 }
 
-/* scroll snap */
-
-html {
-    scroll-snap-type: y mandatory;
-}
-
-#skills-layout, #project-layout {
-    scroll-snap-align: start;
-    scroll-snap-stop: always;
-    height: 100vh;
-}
-
 /* layouts < mobile > */
 
 #main-layout {
@@ -42,6 +30,10 @@ html {
     gap: 0.5vw;
 }
 
+#skills-layout, #project-layout {
+    height: 80vh;
+}
+
 /* text style < mobile > */
 
 header {
@@ -51,7 +43,7 @@ header {
 
 .morse-divider {
     font-size: var(--text-mobile);
-    margin-bottom: 1.15vw;
+    margin-bottom: 2vw;
 }
 
 ul {
@@ -70,6 +62,10 @@ li {
 
 @media (min-width: 768px) {
     /* layouts < mobile > */
+
+    #skills-layout, #project-layout {
+        height: 80vh;
+    }
 
     #main-layout {
         display: flex;

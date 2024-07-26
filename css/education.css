@@ -9,18 +9,6 @@
     --text-desktop: 1vw;
 }
 
-/* scroll snap */
-
-html {
-    scroll-snap-type: y mandatory;
-}
-
-#ndsu-layout, #century-layout {
-    scroll-snap-align: start;
-    scroll-snap-stop: always;
-    height: 100vh;
-}
-
 /* layouts < mobile > */
 
 #main-layout {
@@ -46,6 +34,10 @@ html {
     column-gap: 2.5vw;
 }
 
+#ndsu-layout, #century-layout {
+    height: 80vh;
+}
+
 /* text style < mobile > */
 
 header {
@@ -55,7 +47,7 @@ header {
 
 .morse-divider {
     font-size: var(--text-mobile);
-    margin-bottom: 1.25vw;
+    margin-bottom: 2vw;
 }
 
 location {
@@ -99,6 +91,10 @@ li {
 @media (min-width: 768px) {
 
     /* layouts < desktop > */
+
+    #ndsu-layout, #century-layout {
+        height: 80vh;
+    }
 
     #main-layout {
         display: flex;
